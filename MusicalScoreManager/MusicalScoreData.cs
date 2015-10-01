@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace MusicalScoreManager
 {
-    class MusicalScoreData
+    public class MusicalScoreData
     {
-        public string ScoreName; //楽譜名
-        public string ScoreComposer; //作曲者名
-        public string ScoreArranger; //編曲者名
+        private int ScoreNum; //楽譜通番
+        private string ScoreName; //楽譜名
+        private string ScoreComposer; //作曲者名
+        private string ScoreArranger; //編曲者名
 
+        
     }
 }
