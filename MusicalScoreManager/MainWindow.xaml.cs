@@ -23,6 +23,9 @@ namespace MusicalScoreManager
         public MainWindow()
         {
             InitializeComponent();
+            
+            
         }
+        
     }
 }
