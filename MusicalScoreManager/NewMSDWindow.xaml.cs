@@ -19,9 +19,35 @@ namespace MusicalScoreManager
     /// </summary>
     public partial class newMSDWindow : Window
     {
+        private int ScoreNum; //楽譜通番
+        private string ScoreName; //楽譜名
+        private string ScoreNameJP; //楽譜名（日本語）
+        private string ScoreComposer; //作曲者名
+        private string ScoreArranger; //編曲者名
+        private int ScoreState; //楽譜保存状況
+        private bool IsSMPCreated; //楽譜管理票が作られているかどうか SMP:ScoreManagementPrint
+        private string ScoreClassification; //楽譜の区分
+
         public newMSDWindow()
         {
             InitializeComponent();
+            SavetoNewMSD();
+
+            
+        }
+
+        //新規MSD作成
+        public void SavetoNewMSD() 
+        {
+            MusicalScoreData MSD000001 = new MusicalScoreData();
+            MSD000001.ChangeScoreName(ScoreName);
+
+        }
+
+        private void ScoreName_I_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ScoreName = ScoreName_I.Text;
+            
         }
     }
 }
