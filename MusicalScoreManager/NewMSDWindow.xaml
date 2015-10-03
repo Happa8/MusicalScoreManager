@@ -1,12 +1,12 @@
-﻿<Window x:Name="mainwindow" x:Class="MusicalScoreManager.MainWindow"
+﻿<Window x:Name="newMSDWin" x:Class="MusicalScoreManager.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicalScoreManager"
         mc:Ignorable="d"
-        Title="MainWindow" Width="729" Height="511">
+        Title="新規作成" Height="351" Width="489">
     <Grid>
-        <Button x:Name="newMSD" Content="楽譜データ新規作成" HorizontalAlignment="Left" Height="120" Margin="40,40,0,0" VerticalAlignment="Top" Width="200" FontSize="21.333" Click="newMSD_Click"/>
+
     </Grid>
 </Window>

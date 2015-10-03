@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MusicalScoreManager
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// Window1.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-            
-            
-        }
-
-        private void newMSD_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
