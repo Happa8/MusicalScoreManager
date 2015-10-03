@@ -17,9 +17,9 @@ namespace MusicalScoreManager
     /// <summary>
     /// Window1.xaml の相互作用ロジック
     /// </summary>
-    public partial class Window1 : Window
+    public partial class newMSDWindow : Window
     {
-        public Window1()
+        public newMSDWindow()
         {
             InitializeComponent();
         }

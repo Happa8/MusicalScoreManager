@@ -29,7 +29,8 @@ namespace MusicalScoreManager
 
         private void newMSD_Click(object sender, RoutedEventArgs e)
         {
-            
+            newMSDWindow NewMSD = new newMSDWindow();
+            NewMSD.ShowDialog();
         }
     }
 }
