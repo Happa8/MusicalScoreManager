@@ -14,6 +14,9 @@ namespace MusicalScoreManager
         private string ScoreComposer; //作曲者名
         private string ScoreArranger; //編曲者名
         private int ScoreState; //楽譜保存状況
+        private bool IsSMPCreated; //楽譜管理票が作られているかどうか SMP:ScoreManagementPrint
+        private string ScoreClassification; //楽譜の区分
+
 
 
         //-------フィールドを利用するためのメソッド群--------
@@ -40,6 +43,14 @@ namespace MusicalScoreManager
         public void ChangeScoreState(int CScoreState)
         {
             ScoreState = CScoreState;
+        }
+        public void ChangeIsSMPCreated(bool CIsSMPCreated)
+        {
+            IsSMPCreated = CIsSMPCreated;
+        }
+        public void ChangeScoreClassification(string CScoreClassification)
+        {
+            ScoreClassification = CScoreClassification;
         }
 
         
