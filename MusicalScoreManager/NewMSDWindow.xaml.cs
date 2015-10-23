@@ -49,5 +49,25 @@ namespace MusicalScoreManager
             ScoreName = ScoreName_I.Text;
             
         }
+
+        private void ScoreNameJP_I_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ScoreNameJP = ScoreNameJP_I.Text;
+        }
+
+        private void ScoreComposer_I_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ScoreComposer = ScoreComposer_I.Text;
+        }
+
+        private void ScoreArranger_I_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ScoreArranger = ScoreArranger_I.Text;
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

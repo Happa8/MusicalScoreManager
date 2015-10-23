@@ -54,9 +54,9 @@ namespace MusicalScoreManager
             ScoreClassification = CScoreClassification;
         }
 
-        public void ReadScoreName()
+        public void ReadScoreName(string RScoreName)
         {
-            string 
+            RScoreName = ScoreName;
         }
     }
 }

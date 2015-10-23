@@ -32,5 +32,7 @@ namespace MusicalScoreManager
             newMSDWindow NewMSD = new newMSDWindow();
             NewMSD.ShowDialog();
         }
+
+        
     }
 }
