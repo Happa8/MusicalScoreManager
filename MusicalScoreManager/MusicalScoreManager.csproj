@@ -67,6 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MSD_Out.cs" />
     <Compile Include="NewMSDWindow.xaml.cs">
       <DependentUpon>NewMSDWindow.xaml</DependentUpon>
     </Compile>

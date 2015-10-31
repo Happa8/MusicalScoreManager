@@ -33,13 +33,13 @@ namespace MusicalScoreManager
             InitializeComponent();
             SavetoNewMSD();
 
-            
+
         }
 
         //新規MSD作成
-        public void SavetoNewMSD() 
+        public void SavetoNewMSD()
         {
-            MusicalScoreData MSD000001 = new MusicalScoreData();
+            var MSD000001 = new MusicalScoreData();
             MSD000001.ChangeScoreName(ScoreName);
 
         }
@@ -47,7 +47,7 @@ namespace MusicalScoreManager
         private void ScoreName_I_TextChanged(object sender, TextChangedEventArgs e)
         {
             ScoreName = ScoreName_I.Text;
-            
+
         }
 
         private void ScoreNameJP_I_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,9 +65,24 @@ namespace MusicalScoreManager
             ScoreArranger = ScoreArranger_I.Text;
         }
 
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ScoreState_I_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            /*switch (ScoreState_I.Text)
+            {
+                case ScoreState_0:
+                    ScoreState = 0;
+                    break;
 
+                case ScoreState_1:
+                    ScoreState = 1;
+                    break;
+
+                case ScoreState_2:
+                    ScoreState = 2;
+                    break;
+
+            }*/
         }
+
     }
 }
