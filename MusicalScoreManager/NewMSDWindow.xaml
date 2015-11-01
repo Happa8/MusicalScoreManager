@@ -16,10 +16,11 @@
         <Label x:Name="ScoreArranger_L" Content="編曲者名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,113,0,0" Width="95"/>
         <TextBox x:Name="ScoreArranger_I" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="120,115,0,0" TextChanged="ScoreArranger_I_TextChanged"/>
         <Label x:Name="ScoreState_L" Content="楽譜保存状況" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,146,0,0" Width="95"/>
-        <ComboBox x:Name="ScoreState_I" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="120,150,0,0" SelectionChanged="ScoreState_I_SelectionChanged"/>
-        <ComboBoxItem x:Name="ScoreState_0" Content="0" HorizontalAlignment="Left" Width="108" />
-        <ComboBoxItem x:Name="ScoreState_1" Content="1" HorizontalAlignment="Left" Width="108"/>
-        <ComboBoxItem x:Name="ScoreState_2" Content="2" HorizontalAlignment="Left" Width="108"/>
+        <ComboBox x:Name="ScoreState_I" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="120,150,0,0" SelectionChanged="ScoreState_I_SelectionChanged">
+            <ComboBoxItem x:Name="ScoreState_2" Content="2" HorizontalAlignment="Left" Width="108" Height="20"></ComboBoxItem>
+            <ComboBoxItem x:Name="ScoreState_1" Content="1" HorizontalAlignment="Left" Width="108" Height="20"/>
+            <ComboBoxItem x:Name="ScoreState_0" Content="0" HorizontalAlignment="Left" Width="108" Height="20" />
+        </ComboBox>
 
         <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="156,184,0,0" VerticalAlignment="Top"/>

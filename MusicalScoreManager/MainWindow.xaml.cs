@@ -23,6 +23,7 @@ namespace MusicalScoreManager
         public MainWindow()
         {
             InitializeComponent();
+            //MSD_Out.CreateMSDFile();
             
             
         }
@@ -31,6 +32,7 @@ namespace MusicalScoreManager
         {
             newMSDWindow NewMSD = new newMSDWindow();
             NewMSD.ShowDialog();
+            MSD_Out.CreateMSDFile();
         }
 
         
