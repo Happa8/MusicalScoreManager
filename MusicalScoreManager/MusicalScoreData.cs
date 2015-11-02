@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO;
 
 namespace MusicalScoreManager
 {
@@ -57,6 +58,24 @@ namespace MusicalScoreManager
         public void ReadScoreName(string RScoreName)
         {
             RScoreName = ScoreName;
+        }
+
+        //データ保存用メソッド
+        public void SaveMSD()
+        {
+            string MSDName = ScoreNum.ToString() + ".msd";
+            var WriteMSD = new StreamWriter(MSDName, true, Encoding.GetEncoding("Shift_JIS"));
+
+            WriteMSD.WriteLine(ScoreNum);
+            WriteMSD.WriteLine(ScoreName);
+            WriteMSD.WriteLine(ScoreNameJP);
+            WriteMSD.WriteLine(ScoreComposer);
+            WriteMSD.WriteLine(ScoreArranger);
+            WriteMSD.WriteLine(ScoreState);
+            WriteMSD.WriteLine(IsSMPCreated);
+            WriteMSD.WriteLine(ScoreClassification);
+
+            WriteMSD.Close();
         }
     }
 }
