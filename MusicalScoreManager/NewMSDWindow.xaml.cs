@@ -27,22 +27,24 @@ namespace MusicalScoreManager
         private int ScoreState; //楽譜保存状況
         private bool IsSMPCreated; //楽譜管理票が作られているかどうか SMP:ScoreManagementPrint
         private string ScoreClassification; //楽譜の区分
+        MusicalScoreData NewMSD = new MusicalScoreData();
 
         public newMSDWindow()
         {
             InitializeComponent();
-            SavetoNewMSD();
+            
+            //SavetoNewMSD();
 
 
         }
 
         //新規MSD作成
-        public void SavetoNewMSD()
+        /*public void SavetoNewMSD()
         {
             var MSD000001 = new MusicalScoreData();
             MSD000001.ChangeScoreName(ScoreName);
 
-        }
+        }*/
 
         private void ScoreName_I_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -84,9 +86,15 @@ namespace MusicalScoreManager
             }*/
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Create_Click(object sender, RoutedEventArgs e)
         {
-            
+            NewMSD.ChangeScoreName(ScoreName);
+            NewMSD.ChangeScoreNameJP(ScoreNameJP);
+            NewMSD.ChangeScoreComposer(ScoreComposer);
+            NewMSD.ChangeScoreArranger(ScoreArranger);
+            NewMSD.ChangeScoreState(ScoreState);
+            NewMSD.ChangeIsSMPCreated(IsSMPCreated);
+            NewMSD.SaveMSD();
         }
     }
 }

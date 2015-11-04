@@ -24,7 +24,7 @@
 
         <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="156,184,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="作成" HorizontalAlignment="Left" Margin="320,275,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="button_Click"/>
+        <Button x:Name="Create" Content="作成" HorizontalAlignment="Left" Margin="320,275,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="Create_Click" />
 
     </Grid>
 </Window>

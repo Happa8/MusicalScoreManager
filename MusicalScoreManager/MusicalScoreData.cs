@@ -64,7 +64,7 @@ namespace MusicalScoreManager
         public void SaveMSD()
         {
             string MSDName = ScoreNum.ToString() + ".msd";
-            var WriteMSD = new StreamWriter(MSDName, true, Encoding.GetEncoding("Shift_JIS"));
+            var WriteMSD = new StreamWriter(MSDName, false, Encoding.GetEncoding("Shift_JIS"));
 
             WriteMSD.WriteLine(ScoreNum);
             WriteMSD.WriteLine(ScoreName);
