@@ -32,7 +32,7 @@ namespace MusicalScoreManager
         public newMSDWindow()
         {
             InitializeComponent();
-            ScoreNumSet();
+            
             
             //SavetoNewMSD();
 
@@ -49,7 +49,7 @@ namespace MusicalScoreManager
 
         private void ScoreNumSet()
         {
-            ScoreNum = Initalize_aboutMSD.MSDNum++;
+            ScoreNum = Initalize_aboutMSD.MSDNum;
         }
 
         private void ScoreName_I_TextChanged(object sender, TextChangedEventArgs e)
@@ -94,6 +94,7 @@ namespace MusicalScoreManager
 
         private void Create_Click(object sender, RoutedEventArgs e)
         {
+            ScoreNumSet();
             NewMSD.ChangeScoreNum(ScoreNum);
             NewMSD.ChangeScoreName(ScoreName);
             NewMSD.ChangeScoreNameJP(ScoreNameJP);

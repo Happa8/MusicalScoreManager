@@ -19,7 +19,12 @@ namespace MusicalScoreManager
             if (!CheckMSDFolderCreated)
             {
                 Directory.CreateDirectory(MSDDir);
+                //var MSDFileInfo = new System.IO.DirectoryInfo(MSDDir);
+                //MSDFileInfo.Attributes |= System.IO.FileAttributes.Hidden;
+                
             }
+
+            
 
             
            
