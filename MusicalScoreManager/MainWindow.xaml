@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicalScoreManager"
         mc:Ignorable="d"
-        Title="MainWindow" Width="729" Height="511">
+        Title="MainWindow" Width="729" Height="511" Closing="WindowClosing">
     <Grid>
-        <Button x:Name="newMSD" Content="楽譜データ新規作成" HorizontalAlignment="Left" Height="120" Margin="40,40,0,0" VerticalAlignment="Top" Width="200" FontSize="21.333" Click="newMSD_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="426*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="newMSD" Content="楽譜データ新規作成" HorizontalAlignment="Left" Height="120" Margin="0,40,0,0" VerticalAlignment="Top" Width="200" FontSize="21.333" Click="newMSD_Click" Grid.Column="1"/>
     </Grid>
 </Window>

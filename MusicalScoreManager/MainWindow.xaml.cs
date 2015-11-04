@@ -24,6 +24,7 @@ namespace MusicalScoreManager
         {
             InitializeComponent();
             //MSD_Out.CreateMSDFile();
+            Initalize_aboutMSD.ReadMSDNum();
             
             
         }
@@ -35,6 +36,9 @@ namespace MusicalScoreManager
             MSD_Out.CreateMSDFile();
         }
 
-        
+        private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Initalize_aboutMSD.SaveMSDNum();
+        }
     }
 }

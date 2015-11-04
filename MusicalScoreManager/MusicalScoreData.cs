@@ -76,6 +76,8 @@ namespace MusicalScoreManager
             WriteMSD.WriteLine(ScoreClassification);
 
             WriteMSD.Close();
+
+            Initalize_aboutMSD.MSDNum++;
         }
     }
 }
