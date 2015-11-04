@@ -63,7 +63,7 @@ namespace MusicalScoreManager
         //データ保存用メソッド
         public void SaveMSD()
         {
-            string MSDName = ScoreNum.ToString() + ".msd";
+            string MSDName = "MSD\\" + ScoreNum.ToString() + ".msd";
             var WriteMSD = new StreamWriter(MSDName, false, Encoding.GetEncoding("Shift_JIS"));
 
             WriteMSD.WriteLine(ScoreNum);
