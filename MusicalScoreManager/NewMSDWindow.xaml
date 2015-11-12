@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicalScoreManager"
         mc:Ignorable="d"
-        Title="新規作成" Height="351" Width="489">
+        Title="新規作成" Height="426" Width="564">
     <Grid>
         <Label x:Name="ScoreName_L" Content="楽譜名" HorizontalAlignment="Left" Height="25" Margin="20,20,0,0" VerticalAlignment="Top" Width="95" Cursor="None"/>
         <TextBox x:Name="ScoreName_I" HorizontalAlignment="Left" Height="25" Margin="120,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="ScoreName_I_TextChanged"/>
@@ -24,7 +24,7 @@
 
         <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="156,184,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Create" Content="作成" HorizontalAlignment="Left" Margin="320,275,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="Create_Click" />
+        <Button x:Name="Create" Content="作成" HorizontalAlignment="Left" Margin="406,361,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="Create_Click" />
 
     </Grid>
 </Window>

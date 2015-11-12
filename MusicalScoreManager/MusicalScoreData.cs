@@ -18,6 +18,9 @@ namespace MusicalScoreManager
         private int ScoreState; //楽譜保存状況
         private bool IsSMPCreated; //楽譜管理票が作られているかどうか SMP:ScoreManagementPrint
         private string ScoreClassification; //楽譜の区分
+        private bool IsScore; //スコアがあるかどうか
+        private int LossParts; //紛失したパート府の数
+        private int LossAllScorePart; //楽譜がすべて紛失したパートの数
 
 
 
@@ -53,6 +56,18 @@ namespace MusicalScoreManager
         public void ChangeScoreClassification(string CScoreClassification)
         {
             ScoreClassification = CScoreClassification;
+        }
+        public void ChangeIsScore(bool CIsScore)
+        {
+            IsScore = CIsScore;
+        }
+        public void ChangeLossParts(int CLossParts)
+        {
+            LossParts = CLossParts;
+        }
+        public void ChangeLossAllScorePart(int CLossAllScorePart)
+        {
+            LossAllScorePart = CLossAllScorePart;
         }
 
         public void ReadScoreName(string RScoreName)

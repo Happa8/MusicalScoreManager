@@ -27,6 +27,10 @@ namespace MusicalScoreManager
         private int ScoreState; //楽譜保存状況
         private bool IsSMPCreated; //楽譜管理票が作られているかどうか SMP:ScoreManagementPrint
         private string ScoreClassification; //楽譜の区分
+        private bool IsScore; //スコアがあるかどうか
+        private int LossParts; //紛失したパート府の数
+        private int LossAllScorePart; //楽譜がすべて紛失したパートの数
+
         MusicalScoreData NewMSD = new MusicalScoreData();
 
         public newMSDWindow()
@@ -75,21 +79,21 @@ namespace MusicalScoreManager
 
         private void ScoreState_I_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            /*switch (ScoreState_I.Text)
+            switch (ScoreState_I.Name)
             {
-                case ScoreState_0:
+                case "ScoreState_0":
                     ScoreState = 0;
                     break;
 
-                case ScoreState_1:
+                case "ScoreState_1":
                     ScoreState = 1;
                     break;
 
-                case ScoreState_2:
+                case "ScoreState_2":
                     ScoreState = 2;
                     break;
 
-            }*/
+            }
         }
 
         private void Create_Click(object sender, RoutedEventArgs e)
@@ -103,6 +107,12 @@ namespace MusicalScoreManager
             NewMSD.ChangeScoreState(ScoreState);
             NewMSD.ChangeIsSMPCreated(IsSMPCreated);
             NewMSD.SaveMSD();
+
+            MessageBox.Show("ファイルのセーブが完了しました", "保存完了", 0);
+            //if (MessageBoxButton.OK)
+            {
+
+            }
 
             
         }
