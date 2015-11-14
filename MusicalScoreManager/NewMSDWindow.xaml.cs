@@ -79,7 +79,7 @@ namespace MusicalScoreManager
 
         private void ScoreState_I_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (ScoreState_I.Name)
+            switch (ScoreName_I.Name)
             {
                 case "ScoreState_0":
                     ScoreState = 0;
@@ -92,6 +92,15 @@ namespace MusicalScoreManager
                 case "ScoreState_2":
                     ScoreState = 2;
                     break;
+
+                case "ScoreState_3":
+                    ScoreState = 3;
+                    break;
+
+                case "ScoreState_4":
+                    ScoreState = 4;
+                    break;
+                
 
             }
         }
@@ -116,5 +125,7 @@ namespace MusicalScoreManager
 
             
         }
+
+        
     }
 }

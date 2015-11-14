@@ -7,24 +7,36 @@
         mc:Ignorable="d"
         Title="新規作成" Height="426" Width="564">
     <Grid>
-        <Label x:Name="ScoreName_L" Content="楽譜名" HorizontalAlignment="Left" Height="25" Margin="20,20,0,0" VerticalAlignment="Top" Width="95" Cursor="None"/>
-        <TextBox x:Name="ScoreName_I" HorizontalAlignment="Left" Height="25" Margin="120,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="ScoreName_I_TextChanged"/>
-        <Label x:Name="ScoreNameJP_L" Content="楽譜名（日）" HorizontalAlignment="Left" Height="25" Margin="20,50,0,0" VerticalAlignment="Top" Width="95"/>
-        <TextBox x:Name="ScoreNameJP_I" HorizontalAlignment="Left" Height="25" Margin="120,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="ScoreNameJP_I_TextChanged"/>
-        <Label x:Name="ScoreComposer_L" Content="作曲者名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,80,0,0" Width="95"/>
-        <TextBox x:Name="ScoreComposer_I" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="120,85,0,0" TextChanged="ScoreComposer_I_TextChanged"/>
-        <Label x:Name="ScoreArranger_L" Content="編曲者名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,113,0,0" Width="95"/>
-        <TextBox x:Name="ScoreArranger_I" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="120,115,0,0" TextChanged="ScoreArranger_I_TextChanged"/>
-        <Label x:Name="ScoreState_L" Content="楽譜保存状況" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,146,0,0" Width="95"/>
-        <ComboBox x:Name="ScoreState_I" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Margin="120,150,0,0" SelectionChanged="ScoreState_I_SelectionChanged">
-            <ComboBoxItem x:Name="ScoreState_2" Content="2" HorizontalAlignment="Left" Width="108" Height="20"></ComboBoxItem>
-            <ComboBoxItem x:Name="ScoreState_1" Content="1" HorizontalAlignment="Left" Width="108" Height="20"/>
-            <ComboBoxItem x:Name="ScoreState_0" Content="0" HorizontalAlignment="Left" Width="108" Height="20" />
-        </ComboBox>
-
-        <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="156,184,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Create" Content="作成" HorizontalAlignment="Left" Margin="406,361,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="Create_Click" />
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="310" Margin="10,45,0,0" VerticalAlignment="Top" Width="536">
+            <TabItem x:Name="BasicData" Header="基本情報">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="ScoreName_L" Content="楽譜名" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="95" Cursor="None"/>
+                    <TextBox x:Name="ScoreName_I" HorizontalAlignment="Left" Height="25" Margin="110,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="ScoreName_I_TextChanged"/>
+                    <Label x:Name="ScoreNameJP_L" Content="楽譜名（日）" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Width="95"/>
+                    <TextBox x:Name="ScoreNameJP_I" HorizontalAlignment="Left" Height="25" Margin="110,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="ScoreNameJP_I_TextChanged"/>
+                    <Label x:Name="ScoreComposer_L" Content="作曲者名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" Width="95"/>
+                    <TextBox x:Name="ScoreComposer_I" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="110,70,0,0" TextChanged="ScoreComposer_I_TextChanged"/>
+                    <Label x:Name="ScoreArranger_L" Content="編曲者名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,98,0,0" Width="95"/>
+                    <TextBox x:Name="ScoreArranger_I" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="110,98,0,0" TextChanged="ScoreArranger_I_TextChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="DefectData" Header="欠陥情報">
+                <Grid Background="#FFE5E5E5">
+                    <Label x:Name="ScoreState_L" Content="楽譜保存状況" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="95"/>
+                    <ComboBox x:Name="ScoreState_I" HorizontalAlignment="Left" VerticalAlignment="Top" Width="416" Margin="110,10,0,0" SelectionChanged="ScoreState_I_SelectionChanged">
+                        <ComboBoxItem x:Name="ScoreState_4" Content="4 : 現在市販されている楽譜と同程度の保存のよさ" HorizontalAlignment="Left" Width="406"/>
+                        <ComboBoxItem x:Name="ScoreState_3" Content="3 : 古さはあるが、演奏に使用できる" HorizontalAlignment="Left" Width="406"/>
+                        <ComboBoxItem x:Name="ScoreState_2" Content="2 : 損傷はあるが、演奏に使用できないことはない" HorizontalAlignment="Left" Width="405"/>
+                        <ComboBoxItem x:Name="ScoreState_1" Content="1 : 損傷がひどい。または、演奏時の判読が困難" HorizontalAlignment="Left" Width="410"/>
+                        <ComboBoxItem x:Name="ScoreState_0" Content="0 : 判読がほぼ不可能で、演奏に使用できない" HorizontalAlignment="Left" Width="414"/>
+                    </ComboBox>
+                    <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="120"/>
+                    <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="135,43,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Label x:Name="label" Content="各種データを入力してください" HorizontalAlignment="Left" Height="30" Margin="20,10,0,0" VerticalAlignment="Top" Width="240" FontSize="16"/>
 
     </Grid>
 </Window>

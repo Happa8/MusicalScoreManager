@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicalScoreManager"
         mc:Ignorable="d"
-        Title="MainWindow" Width="729" Height="511" Closing="WindowClosing">
+        Title="メインメニュー" Width="729" Height="511" Closing="WindowClosing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
