@@ -79,30 +79,41 @@ namespace MusicalScoreManager
 
         private void ScoreState_I_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (ScoreName_I.Name)
+            //MessageBox.Show(ScoreState_I.SelectedIndex.ToString());
+            switch (ScoreState_I.SelectedIndex)
             {
-                case "ScoreState_0":
+                case 4:
                     ScoreState = 0;
                     break;
 
-                case "ScoreState_1":
+                case 3:
                     ScoreState = 1;
                     break;
 
-                case "ScoreState_2":
+                case 2:
                     ScoreState = 2;
                     break;
 
-                case "ScoreState_3":
+                case 1:
                     ScoreState = 3;
                     break;
 
-                case "ScoreState_4":
+                case 0:
                     ScoreState = 4;
                     break;
-                
+
 
             }
+        }
+
+        private void IsSMPCreated_I_Checked(object sender, RoutedEventArgs e)
+        {
+            IsSMPCreated = true;
+        }
+
+        private void IsSMPCreated_I_Unchecked(object sender, RoutedEventArgs e)
+        {
+            IsSMPCreated = false;
         }
 
         private void Create_Click(object sender, RoutedEventArgs e)

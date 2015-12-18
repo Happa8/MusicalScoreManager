@@ -8,7 +8,7 @@
         Title="新規作成" Height="426" Width="564">
     <Grid>
         <Button x:Name="Create" Content="作成" HorizontalAlignment="Left" Margin="406,361,0,0" VerticalAlignment="Top" Width="140" Height="25" Click="Create_Click" />
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="310" Margin="10,45,0,0" VerticalAlignment="Top" Width="536">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="310" Margin="10,45,0,0" VerticalAlignment="Top" Width="536" IsSynchronizedWithCurrentItem="True">
             <TabItem x:Name="BasicData" Header="基本情報">
                 <Grid Background="#FFE5E5E5">
                     <Label x:Name="ScoreName_L" Content="楽譜名" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="95" Cursor="None"/>
@@ -22,7 +22,7 @@
                 </Grid>
             </TabItem>
             <TabItem x:Name="DefectData" Header="欠陥情報">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-7,0">
                     <Label x:Name="ScoreState_L" Content="楽譜保存状況" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Width="95"/>
                     <ComboBox x:Name="ScoreState_I" HorizontalAlignment="Left" VerticalAlignment="Top" Width="416" Margin="110,10,0,0" SelectionChanged="ScoreState_I_SelectionChanged">
                         <ComboBoxItem x:Name="ScoreState_4" Content="4 : 現在市販されている楽譜と同程度の保存のよさ" HorizontalAlignment="Left" Width="406"/>
@@ -32,7 +32,7 @@
                         <ComboBoxItem x:Name="ScoreState_0" Content="0 : 判読がほぼ不可能で、演奏に使用できない" HorizontalAlignment="Left" Width="414"/>
                     </ComboBox>
                     <Label x:Name="IsSMPCreated_L" Content="楽譜管理表作成済み" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="120"/>
-                    <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="135,43,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="IsSMPCreated_I" Content="" HorizontalAlignment="Left" Margin="135,43,0,0" VerticalAlignment="Top" Checked="IsSMPCreated_I_Checked" Unchecked="IsSMPCreated_I_Unchecked"/>
                 </Grid>
             </TabItem>
         </TabControl>
